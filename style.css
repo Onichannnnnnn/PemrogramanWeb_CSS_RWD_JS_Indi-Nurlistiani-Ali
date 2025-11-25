@@ -1,0 +1,359 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style dasar untuk bagian halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #fce7f3;
+    color: #1a1a1a;
+}
+
+/* Latar halaman mode berantakan */
+body.messy {
+    background-color: #ff1493;
+    color: #ffff00;
+}
+
+/* Ukuran panel yang menampung semua konten */
+.container {
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Supaya halaman gallery tidak terlihat pada halaman utama */
+.page {
+    display: none;
+}
+
+/* Supaya konten tampil di halaman web */
+.page.active {
+    display: block;
+}
+
+/* Panel identitas */
+.identity-section {
+    background: #ec4899;
+    color: white;
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 50px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Mengubah warna panel identitas di mode berantakan */
+body.messy .identity-section {
+    background: #00ff00;
+    color: #ff00ff;
+}
+
+/* Panel konten utama */
+.content-section {
+    background-color: #fff5f7;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+/* Mengubah warna panel konten di mode berantakan */
+body.messy .content-section {
+    background-color: #ffff00;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+/* Mengatur jarak panel penjelasan umum dengan garis header judul */
+.section-header {
+    margin-bottom: 30px;
+}
+
+/* Mengatur style header judul (ukuran, warna judul, jarak garis header dengan judul) */
+.section-header h1 {
+    color: #2d3748;
+    font-size: 4rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Ubah warna judul mode berantakan */
+body.messy .section-header h1 {
+    color: #ffdef6;
+}
+
+/* Mengatur garis header */
+.header-line {
+    width: auto;
+    height: 5px;
+    background: #ec4899;
+}
+
+/* Mengubah warna garis header di mode berantakan */
+body.messy .header-line {
+    background: #0000ff;
+}
+
+/* Mengatur style panel penjelasan umum */
+.intro-text {
+    font-size: 2rem;
+    color: #4a5568;
+    text-align: justify;
+    margin-bottom: 50px;
+    height: 100%;
+    line-height: 1.5;
+    padding: 25px;
+    background-color: white;
+    border-left: 5px solid #ec4899;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Mengubah style panel penjelasan umum di mode berantakan */
+body.messy .intro-text {
+    background-color: #00ffff;
+    color: #ff00ff;
+    border-left: 5px solid #ff0000;
+}
+
+/* Mengatur layout grid untuk panel artikel */
+.problems-grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Style panel artikel */
+.problem-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Style panel artikel di mode berantakan */
+body.messy .problem-card {
+    background-color: #00ff00;
+    border: 3px solid #ff00ff;
+}
+
+/* Padding konten dalam panel artikel */
+.problem-content {
+    padding: 20px;
+}
+
+.problem-title {
+    font-size: 2rem;
+}
+
+/* Warna judul artikel di mode berantakan */
+body.messy .problem-title {
+    color: #ff0000;
+}
+
+/* Efek hover pada judul artikel (mode rapi) */
+.problem-title:hover {
+    color: #ec4899;
+}
+
+/* Deskripsi pada panel artikel */
+.problem-description {
+    color: #4a5568;
+    margin-top: 30px;
+    text-align: justify;
+    font-size: 2rem;
+    line-height: 1.6;
+    display: block;
+}
+
+/* Deskripsi di mode berantakan */
+body.messy .problem-description {
+    color: #0000ff;
+    margin-top: -10px;
+}
+
+/* Menyembunyikan deskripsi saat diklik */
+.problem-description.hidden {
+    display: none;
+}
+
+/* Teks note (Lihat Detail/Sembunyikan) */
+.toggle-text {
+    display: inline-block ;
+    color: #ec4899;
+    font-size: 1.5rem;
+    font-weight: 100;
+    opacity: 0.6;
+    margin-top: 30px;
+}
+
+/* Warna teks note di mode berantakan */
+body.messy .toggle-text {
+    color: #ffff00;
+    opacity: 100;
+}
+
+/* Container untuk semua tombol */
+.button-container {
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Container untuk tombol mode (rapi/berantakan) */
+.mode-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Style dasar untuk semua tombol */
+button {
+    padding: 15px 35px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Style tombol mode rapi/berantakan */
+.mode-button {
+    background: #ec4899;
+    color: white;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+    width: auto;
+    min-width: 250px;
+}
+
+/* Style tombol mode saat dalam mode berantakan */
+body.messy .mode-button {
+    background: #00ff00;
+    color: #ff00ff;
+    box-shadow: none;
+}
+
+/* Layout grid untuk gallery */
+.gallery {
+    display: grid;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+/* RWD Gallery: Tampilan mobile (1 kolom) */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* RWD Gallery: Tampilan tablet (2 kolom) */
+@media (min-width: 601px) and (max-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* RWD Gallery: Tampilan desktop (3 kolom) */
+@media (min-width: 993px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Style item dalam gallery */
+.gallery-item {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Efek hover pada item gallery */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.25);
+}
+
+/* Style gambar dalam gallery */
+.gallery-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Konten teks dalam item gallery */
+.gallery-item-content {
+    padding: 30px;
+}
+
+/* Judul item gallery */
+.gallery-item h3 {
+    color: #db2777;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* Deskripsi teks gallery */
+.gallery-item p {
+    color: #4a5568;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+/* RWD: Penyesuaian untuk layar kecil */
+@media (max-width: 768px) {
+    /* Kurangi padding container di mobile */
+    .container {
+        padding: 20px 15px;
+    }
+
+    /* Kurangi padding konten di mobile */
+    .content-section {
+        padding: 25px 20px;
+    }
+
+    /* Perkecil ukuran judul di mobile */
+    .section-header h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Perkecil ukuran judul identitas di mobile */
+    .identity-section h2 {
+        font-size: 1.1rem;
+    }
+
+    /* Perkecil ukuran tombol di mobile */
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    /* Susun tombol mode secara vertikal di mobile */
+    .mode-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Tombol mode full width di mobile */
+    .mode-button {
+        width: 100%;
+    }
+
+    /* Tombol gallery full width di mobile */
+    .gallery-button {
+        width: 100%;
+    }
+}
+

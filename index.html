@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Informasi Pencemaran Lingkungan</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Halaman Pertama: Halaman utama dengan informasi pencemaran lingkungan -->
+    <div id="mainPage" class="page active">
+        <div class="container">
+            <!-- Membuat panel identitas -->
+            <div class="identity-section">
+                <h2>Nama: Indi Nurlistiani Ali</h2>
+                <h2>NIM: 202431190</h2>
+            </div>
+            
+            <!-- Section konten utama -->
+            <div class="content-section">
+                <!-- Membuat header judul -->
+                <div class="section-header">
+                    <h1>Informasi Pencemaran Lingkungan</h1>
+                    <!-- Garis header di bawah judul -->
+                    <div class="header-line"></div>
+                </div>
+                
+                <!-- Membuat panel penjelasan umum -->
+                <p class="intro-text">
+                    Pencemaran lingkungan adalah masuknya atau dimasukkannya makhluk hidup, zat energi 
+                    dan komponen lain ke dalam lingkungan oleh kegiatan manusia sehingga melampaui 
+                    baku mutu lingkungan yang telah ditetapkan. Pencemaran lingkungan dapat menyebabkan 
+                    kerusakan pada ekosistem, kesehatan manusia, dan keseimbangan alam.<br><br>Berikut adalah 
+                    7 jenis pencemaran lingkungan yang perlu kita ketahui dan pahami untuk menjaga 
+                    kelestarian bumi kita.
+                </p>
+                
+                <!-- Container untuk menampilkan daftar card pencemaran (diisi oleh JavaScript) -->
+                <div id="problemsList" class="problems-grid"></div>
+
+                <!-- Container untuk semua tombol -->
+                <div class="button-container">
+                    <!-- Container tombol mode tampilan -->
+                    <div class="mode-buttons">
+                        <!-- Tombol untuk mengaktifkan mode rapi -->
+                        <button class="mode-button" onclick="setTidyMode()">
+                            Mode Rapi
+                        </button>
+                        <!-- Tombol untuk mengaktifkan mode berantakan -->
+                        <button class="mode-button" onclick="setMessyMode()">
+                            Mode Berantakan
+                        </button>
+                    </div>
+                    <!-- Tombol untuk menuju ke halaman galeri -->
+                    <button class="mode-button" onclick="goToGalleryPage()">
+                        Tampilkan Gambar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Halaman Kedua: Halaman galeri gambar pencemaran -->
+    <div id="galleryPage" class="page">
+        <div class="container">
+            <!-- Header judul halaman galeri -->
+            <div class="section-header">
+                <h1>Galeri Pencemaran Lingkungan</h1>
+                <!-- Garis dekoratif di bawah judul -->
+                <div class="header-line"></div>
+            </div>
+            <!-- Container untuk menampilkan grid galeri gambar (diisi oleh JavaScript) -->
+            <div class="gallery" id="galleryGrid"></div>
+            
+            <!-- Container tombol navigasi -->
+            <div class="button-container">
+                <!-- Tombol untuk kembali ke halaman utama -->
+                <button class="mode-button" onclick="goToMainPage()">
+                    Kembali ke Halaman Sebelumnya
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
